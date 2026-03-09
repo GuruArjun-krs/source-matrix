@@ -1,0 +1,26 @@
+@use '../../../../Utils/mixins' as *;
+
+.cardHeading {
+    font-family: 'urbanist-semibold';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+.cardSubHeading {
+    @include tBodySmall;
+    margin-bottom: 0px;
+    color: #4D4D4D;
+}
+
+.successText {
+    font-family: 'urbanist-medium';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #007429;
+}

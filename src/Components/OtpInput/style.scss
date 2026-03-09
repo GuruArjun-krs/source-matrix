@@ -1,0 +1,43 @@
+@use "../../Utils/mixins" as *;
+@use "../../Utils/colors" as color;
+
+.axyon__ {
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .ant-input {
+        border-top: 0 !important;
+        border-inline: 0 !important;
+        border-bottom: 1px solid #4D4D4D !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        transition: border-color 0.3s;
+        font-size: 32px;
+        color: #212121;
+        font-family: 'urbanist-semibold';
+
+        &:focus,
+        &-focused {
+            border-bottom-color: #00126D !important;
+        }
+
+        &-status-error {
+            border-bottom-color: color.$error !important;
+        }
+    }
+}
+
+.errorStyle {
+    @include tBodySmall;
+    color: color.$error;
+    margin-top: 8px;
+}

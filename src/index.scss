@@ -1,0 +1,88 @@
+@use "./Utils/mixins" as *;
+@use "./Utils/fonts" as font;
+
+body {
+    font-family: 'urbanist-regular';
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+    .axyon__scrollBar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .axyon__scrollBar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+h1 {
+    @include hOne;
+    font-family: 'urbanist-bold';
+    margin-bottom: 0px;
+}
+
+h2 {
+    @include hTwo;
+    font-family: 'urbanist-semibold';
+    margin-bottom: 0px;
+}
+
+h3 {
+    @include hThree;
+    font-family: 'urbanist-medium';
+    margin-bottom: 0px;
+}
+
+h4 {
+    @include hFour;
+    font-family: 'urbanist-medium';
+    margin-bottom: 0px;
+}
+
+h5 {
+    @include hFive;
+    font-family: 'urbanist-medium';
+    margin-bottom: 0px;
+}
+
+h6 {
+    @include hSix;
+    font-family: 'urbanist-medium';
+    margin-bottom: 0px;
+}
+
+label {
+    @include label;
+    font-family: 'urbanist-medium';
+    margin-bottom: 0px;
+}
+
+p {
+    @include tBodySmall;
+    margin-bottom: 0px;
+}
+
+.bodyLarge {
+    @include tBodyLarge;
+    margin-bottom: 0px;
+}
+
+.bodyMedium {
+    @include tBodyMedium;
+    margin-bottom: 0px;
+}
+
+.hSmall {
+    @include hSmall;
+    margin-bottom: 0px;
+}
+
+.bMedium {
+    @include bMedium;
+    margin-bottom: 0px;
+}
