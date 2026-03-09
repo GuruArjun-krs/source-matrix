@@ -16,11 +16,11 @@ const Layout = () => {
     const [sidebarSlide, setSlide] = useState(false)
 
     useEffect(() => {
-        const hasSeenTour = localStorage.getItem('hasSeenTour');
-        if (!hasSeenTour) {
+        const axyonTour = localStorage.getItem('axyonTour');
+        if (!axyonTour) {
             setTimeout(() => {
                 startTour();
-                localStorage.setItem('hasSeenTour', 'true');
+                localStorage.setItem('axyonTour', 'true');
             }, 1500);
         }
     }, []);
@@ -52,10 +52,38 @@ const Layout = () => {
         animate: true,
         overlayColor: 'rgba(0, 0, 0, 0.7)',
         steps: [
-            { element: '.axyon__tour_sidebar', popover: { title: 'Quick Intro', description: 'This tour gives you a brief overview of the assessment structure and what information you’ll be asked for.', side: "right" } },
-            { element: '.axyon__assessment_card_wrapper', popover: { title: 'Assessment Details', description: 'See a snapshot of what the assessment covers and how the process works before you start.', side: "right" } },
-            { element: '.axyon_assessment_card_body', popover: { title: 'Info Needed', description: 'You’ll answer brief questions to help us understand your overall inputs and choices throughout the process.', side: "top" } },
-            { element: '.axyon_assessment_card_footer', popover: { title: 'Start Assessment', description: "Click here when you're ready to begin the assessment. It takes around 20-60 minutes to complete.", side: "top" } }
+            {
+                element: '.axyon__tour_sidebar',
+                popover: {
+                    title: 'Quick Intro',
+                    description: 'This tour gives you a brief overview of the assessment structure and what information you’ll be asked for.',
+                    side: "right"
+                }
+            },
+            {
+                element: '.axyon__assessment_card_wrapper',
+                popover: {
+                    title: 'Assessment Details',
+                    description: 'See a snapshot of what the assessment covers and how the process works before you start.',
+                    side: "right"
+                }
+            },
+            {
+                element: '.axyon_assessment_card_body',
+                popover: {
+                    title: 'Info Needed',
+                    description: 'You’ll answer brief questions to help us understand your overall inputs and choices throughout the process.',
+                    side: "top"
+                }
+            },
+            {
+                element: '.axyon_assessment_card_footer',
+                popover: {
+                    title: 'Start Assessment',
+                    description: "Click here when you're ready to begin the assessment. It takes around 20-60 minutes to complete.",
+                    side: "top"
+                }
+            }
         ]
     });
 

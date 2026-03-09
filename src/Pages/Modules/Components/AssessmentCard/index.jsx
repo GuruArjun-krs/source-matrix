@@ -7,13 +7,13 @@ const AssessmentCard = ({ cardData, onStart }) => {
     const { image, heading, subHeading, status, time, percentage } = cardData
 
     return (
-        <div className='bg-[#FFFFFF] axyon__assessment_card_wrapper rounded-[12px] px-[16px] py-[12px] border border-[#E9E9E9] flex flex-col gap-[22px]'>
+        <div className='bg-[#FFFFFF] axyon__assessment_card_wrapper rounded-[12px] px-[16px] py-[12px] border border-[#E9E9E9] flex flex-col gap-[16px]'>
 
             <div className='rounded-[8px] border border-[#E9E9E9]'>
                 <img src={image} alt="" className='w-full rounded-[8px] h-full object-contain ' />
             </div>
 
-            <div className='flex flex-col axyon_assessment_card_body'>
+            <div className='flex flex-col gap-[22px] axyon_assessment_card_body'>
                 {(heading || subHeading) && (
                     <div className='flex flex-col gap-[8px]'>
                         {heading && <p className='cardHeading'>{heading}</p>}
