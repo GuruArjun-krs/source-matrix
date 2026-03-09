@@ -61,8 +61,8 @@ const Modules = () => {
             btnTitle='Add New Module'
         >
             <div className="grid grid-cols-3 gap-4">
-                {assessmentList?.map((el) => (
-                    <AssessmentCard cardData={el} />
+                {assessmentList?.map((el, index) => (
+                    <AssessmentCard key={index} cardData={el} />
                 ))}
             </div>
         </PageWrapper>
