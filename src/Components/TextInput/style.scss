@@ -2,7 +2,7 @@
 @use "../../Utils/colors" as color;
 
 .labelStyle {
-    @include tBodySmall;
+    @include bodySmall;
     color: color.$primary_txt;
 }
 
@@ -12,6 +12,6 @@
 }
 
 .errorStyle {
-    @include tBodySmall;
+    @include bodySmall;
     color: color.$error;
 }

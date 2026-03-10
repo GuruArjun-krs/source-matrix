@@ -52,7 +52,7 @@ const Login = () => {
                     </div>
                     <div className='flex flex-col gap-[16px]'>
                         <Button title={'Login'} size={'large'} onClick={loginFormik.handleSubmit} />
-                        <p className='bodyMedium'>Didn’t Have Register as Reviewer ? <span className='label cursor-pointer font-semibold text-[#00126D]'>Sign Up</span></p>
+                        <p className='bodyMedium'>Didn’t Have Register as Reviewer ? <span className='btnLarge cursor-pointer font-semibold text-[#00126D]'>Sign Up</span></p>
                     </div>
                 </div>
             </div>

@@ -6,14 +6,13 @@ import { metaTitle } from '../../Utils/functions'
 import { Popup, Button } from '../../Components'
 import { AuthContext } from '../../Context/AuthContext'
 
-
 const Sidebar = () => {
     const { setAuthenticate } = useContext(AuthContext);
     const logoutModelRef = useRef();
 
     const handleLogout = () => {
         setAuthenticate((prev) => ({ ...prev, auth: false }))
-        localStorage.clear()
+        localStorage.removeItem('token')
         navigate('/login')
     }
 
@@ -40,7 +39,7 @@ const Sidebar = () => {
                         onMouseDown={(e) => e?.preventDefault()}
                         to={el?.route}
                         key={el?.id || index}
-                        className={({ isActive }) => `flex items-center gap-[8px] py-[12px] px-[14px] rounded-[48px] transition-colors ${isActive ? "bg-[#C1E2EF]" : "bg-transparent hover:bg-gray-100"}`}
+                        className={({ isActive }) => `${el?.title === 'Modules' && "axyon__tour_sidebar"} flex items-center gap-[8px] py-[12px] px-[14px] rounded-[48px] transition-colors ${isActive ? "bg-[#C1E2EF]" : "bg-transparent hover:bg-gray-100"}`}
                         onClick={() => metaTitle?.(el?.title)}
                     >
                         {({ isActive }) => (
