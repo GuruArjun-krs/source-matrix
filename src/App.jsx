@@ -14,7 +14,7 @@ function App() {
           colorPrimary: '#78C0DD',
           colorBgContainer: '#FFFFFF',
           colorBgLayout: '#78C0DD',
-          colorTextBase: '#1A1A1A'
+          colorTextBase: '#212121'
         },
         algorithm: theme.defaultAlgorithm,
       }}

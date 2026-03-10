@@ -10,8 +10,8 @@ const PageWrapper = ({ children, icon, heading, subHeading, handleIconClick, btn
                         {icon}
                     </div>
                     <div className='flex flex-col gap-[4px]'>
-                        <p className='hSmall'>{heading}</p>
-                        {subHeading && <p className='bMedium'>{subHeading}</p>}
+                        <h4>{heading}</h4>
+                        {subHeading && <p className='bodyMedium secondaryTxt'>{subHeading}</p>}
                         {breadCrumb && breadCrumb}
                     </div>
                 </div>

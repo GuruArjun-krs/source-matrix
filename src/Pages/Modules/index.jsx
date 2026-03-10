@@ -1,10 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import PageWrapper from '../../Components/PageWrapper'
 import { AssessmentIcon } from '../../Assets/Svg'
 import AssessmentCard from './Components/AssessmentCard'
 import { Images } from '../../Assets/Images'
 
 const Modules = () => {
+    const navigate = useNavigate()
 
     const assessmentList = [
         {
@@ -62,7 +64,7 @@ const Modules = () => {
         >
             <div className="grid grid-cols-3 gap-4">
                 {assessmentList?.map((el, index) => (
-                    <AssessmentCard key={index} cardData={el} />
+                    <AssessmentCard key={index} cardData={el} onStart={()=>navigate('/modules/assessment')} />
                 ))}
             </div>
         </PageWrapper>

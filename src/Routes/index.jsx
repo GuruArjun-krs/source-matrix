@@ -48,6 +48,9 @@ const MainRoute = () => {
                             <Route index element={<Navigate to="/dashboard" replace />} />
                             <Route path="dashboard" element={<Dashboard />} />
                             {renderRoutes(Sidebaritems)}
+                            {PageItems?.filter(el => el.isAuth).map(el => (
+                                <Route key={el.path} path={el.path} element={el.element} />
+                            ))}
                             <Route path="*" element={<Navigate to="/dashboard" replace />} />
                         </Route>
                     )}

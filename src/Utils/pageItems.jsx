@@ -2,6 +2,7 @@ import Login from "../Pages/Auth/Login"
 import Onboarding from "../Pages/Auth/Onboarding"
 import Register from "../Pages/Auth/Register"
 import VerifyEmail from "../Pages/Auth/VerifyEmail"
+import AssessmentFlow from "../Pages/Modules/AssessmentFlow"
 
 export const PageItems = [
     {
@@ -23,5 +24,10 @@ export const PageItems = [
         path: "/verifyEmail",
         element: <VerifyEmail />,
         isAuth: false
+    },
+    {
+        path: "/modules/assessment",
+        element: <AssessmentFlow />,
+        isAuth: true,
     }
 ]

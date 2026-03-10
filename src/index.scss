@@ -1,5 +1,6 @@
 @use "./Utils/mixins" as *;
 @use "./Utils/fonts" as font;
+@use "./Utils/colors" as color;
 
 body {
     font-family: 'urbanist-regular';
@@ -24,65 +25,172 @@ h1 {
     @include hOne;
     font-family: 'urbanist-bold';
     margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
 h2 {
     @include hTwo;
     font-family: 'urbanist-semibold';
     margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
 h3 {
     @include hThree;
     font-family: 'urbanist-medium';
     margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
 h4 {
     @include hFour;
     font-family: 'urbanist-medium';
     margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
 h5 {
     @include hFive;
     font-family: 'urbanist-medium';
     margin-bottom: 0px;
-}
-
-h6 {
-    @include hSix;
-    font-family: 'urbanist-medium';
-    margin-bottom: 0px;
-}
-
-label {
-    @include label;
-    font-family: 'urbanist-medium';
-    margin-bottom: 0px;
-}
-
-p {
-    @include tBodySmall;
-    margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
 .bodyLarge {
-    @include tBodyLarge;
+    @include bodyLarge;
     margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
 .bodyMedium {
-    @include tBodyMedium;
+    @include bodyMedium;
     margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
-.hSmall {
-    @include hSmall;
+p {
+    @include bodySmall;
     margin-bottom: 0px;
+    color: color.$primary_txt;
 }
 
-.bMedium {
-    @include bMedium;
-    margin-bottom: 0px;
+.caption {
+    @include caption;
+    color: color.$primary_txt;
+}
+
+.btnLarge {
+    @include btnLarge;
+}
+
+.accent_50 {
+    color: color.$accent_50;
+}
+
+.accent_100 {
+    color: color.$accent_100;
+}
+
+.accent_200 {
+    color: color.$accent_200;
+}
+
+.accent_300 {
+    color: color.$accent_300;
+}
+
+.accent_400 {
+    color: color.$accent_400;
+}
+
+.accent_500 {
+    color: color.$accent_500;
+}
+
+.accent_600 {
+    color: color.$accent_600;
+}
+
+.accent_700 {
+    color: color.$accent_700;
+}
+
+.accent_800 {
+    color: color.$accent_800;
+}
+
+.accent_900 {
+    color: color.$accent_900;
+}
+
+.secondary_50 {
+    color: color.$secondary_50;
+}
+
+.secondary_100 {
+    color: color.$secondary_100;
+}
+
+.secondary_200 {
+    color: color.$secondary_200;
+}
+
+.secondary_300 {
+    color: color.$secondary_300;
+}
+
+.secondary_400 {
+    color: color.$secondary_400;
+}
+
+.secondary_500 {
+    color: color.$secondary_500;
+}
+
+.secondary_600 {
+    color: color.$secondary_600;
+}
+
+.secondary_700 {
+    color: color.$secondary_700;
+}
+
+.secondary_800 {
+    color: color.$secondary_800;
+}
+
+.secondary_900 {
+    color: color.$secondary_900;
+}
+
+.blackClr {
+    color: color.$black_clr
+}
+
+.whiteClr {
+    color: color.$white_clr
+}
+
+.primaryClr {
+    color: color.$primary_clr
+}
+
+.secondaryClr {
+    color: color.$secondary_clr
+}
+
+.primaryTxt {
+    color: color.$primary_txt
+}
+
+.secondaryTxt {
+    color: color.$secondary_txt
+}
+
+.disableBg {
+    color: color.$disableBg
+}
+
+.disableTxt {
+    color: color.$disableTxt
 }

@@ -5,17 +5,14 @@ import { Sidebaritems } from '../../Utils/sidebarItems'
 import { metaTitle } from '../../Utils/functions'
 import { Popup, Button } from '../../Components'
 import { AuthContext } from '../../Context/AuthContext'
-import { useTour } from '../../Layout'
-
 
 const Sidebar = () => {
-    const { startTour } = useTour();
     const { setAuthenticate } = useContext(AuthContext);
     const logoutModelRef = useRef();
 
     const handleLogout = () => {
         setAuthenticate((prev) => ({ ...prev, auth: false }))
-        localStorage.clear()
+        localStorage.removeItem('token')
         navigate('/login')
     }
 
@@ -64,14 +61,6 @@ const Sidebar = () => {
             <aside className='bg-[#FFFFFF] w-[260px] h-[100vh-68px] overflow-y-scroll axyon__scrollBar py-[24px] px-[16px]'>
                 <div className='flex flex-col gap-[24px]'>
                     {NavigationFunc(Sidebaritems)}
-                </div>
-
-                <div
-                    className="mt-auto pt-4 border-t border-[#F5F5F5] cursor-pointer flex items-center gap-2 opacity-70 hover:opacity-100"
-                    onClick={startTour}
-                >
-                    <span className="text-[18px]">💡</span>
-                    <p className="bodySmall text-[#666]">Show Tour</p>
                 </div>
             </aside>
 

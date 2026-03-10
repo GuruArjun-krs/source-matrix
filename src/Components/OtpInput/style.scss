@@ -37,7 +37,7 @@
 }
 
 .errorStyle {
-    @include tBodySmall;
+    @include bodySmall;
     color: color.$error;
     margin-top: 8px;
 }

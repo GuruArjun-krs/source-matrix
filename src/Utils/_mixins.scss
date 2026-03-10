@@ -28,10 +28,28 @@
     font-weight: 500;
 }
 
-@mixin hSix {
+@mixin bodyLarge {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+@mixin bodyMedium {
     font-size: 16px;
     line-height: 24px;
+    font-weight: 400;
+}
+
+@mixin bodySmall {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+@mixin caption {
+    font-size: 12px;
     font-weight: 500;
+    line-height: 16px;
 }
 
 @mixin label {
@@ -40,32 +58,8 @@
     font-weight: 400;
 }
 
-@mixin tBodyLarge {
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 400;
-}
-
-@mixin tBodyMedium {
+@mixin btnLarge {
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    font-weight: 400;
-}
-
-@mixin tBodySmall {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-}
-
-@mixin hSmall {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 500;
-}
-
-@mixin bMedium {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
 }

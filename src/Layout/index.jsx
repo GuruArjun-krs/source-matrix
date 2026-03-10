@@ -1,5 +1,5 @@
-import React, { useContext, useState, createContext, useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
+import React, { useContext, createContext, useEffect, useMemo } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
@@ -12,20 +12,22 @@ export const useTour = () => useContext(TourContext);
 
 const Layout = () => {
     const { isAuthenticate } = useContext(AuthContext);
-    const [toggle, setToggle] = useState([]);
-    const [sidebarSlide, setSlide] = useState(false)
+    const location = useLocation();
+    const hideSidebar = ['/modules/assessment'].some(path => location?.pathname?.startsWith(path));
 
     useEffect(() => {
-        const axyonTour = localStorage.getItem('axyonTour');
-        if (!axyonTour) {
-            setTimeout(() => {
+        const axyonTourPlay = localStorage.getItem('axyonTour');
+        if (!axyonTourPlay && isAuthenticate) {
+            const timer = setTimeout(() => {
                 startTour();
                 localStorage.setItem('axyonTour', 'true');
             }, 1500);
-        }
-    }, []);
 
-    const tour = driver({
+            return () => clearTimeout(timer);
+        }
+    }, [isAuthenticate]);
+
+    const tour = useMemo(() => driver({
         showProgress: false,
         nextBtnText: 'Next',
         prevBtnText: 'Back',
@@ -85,7 +87,7 @@ const Layout = () => {
                 }
             }
         ]
-    });
+    }), []);
 
     const startTour = () => tour.drive();
 
@@ -94,8 +96,8 @@ const Layout = () => {
             <div className='h-screen'>
                 <Header isLogo primary={isAuthenticate} />
                 <div className='h-[calc(100%-69px)] flex'>
-                    <Sidebar toggle={toggle} setToggle={setToggle} sidebarSlide={sidebarSlide} setSlide={setSlide} />
-                    <main className='w-[calc(100%-260px)] bg-[#F5F5F5] py-[24px] px-[32px]'>
+                    {!hideSidebar && <Sidebar />}
+                    <main className={`${hideSidebar ? "w-full" : "w-[calc(100%-260px)]"} bg-[#F5F5F5] py-[24px] px-[32px] transition-all duration-100 ease-in-out`}>
                         <Outlet />
                     </main>
                 </div>

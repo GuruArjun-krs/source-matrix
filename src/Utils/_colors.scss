@@ -1,51 +1,40 @@
-// Primary colors
-$primary_50 : #E6F3F3;
-$primary_100 : #B0DADB;
-$primary_200 : #8AC8C9;
-$primary_300 : #54AFB1;
-$primary_400 : #33A0A1;
-$primary_500 : #00888A;
-$primary_600 : #007C7E;
-$primary_700 : #006162;
-$primary_800 : #004B4C;
-$primary_900 : #00393A;
+// accent colors
+$accent_50 : #F2F9FC;
+$accent_100 : #D5EBF4;
+$accent_200 : #C1E2EF;
+$accent_300 : #A5D5E8;
+$accent_400 : #93CDE4;
+$accent_500 : #78C0DD;
+$accent_600 : #6DAFC9;
+$accent_700 : #55889D;
+$accent_800 : #426A7A;
+$accent_900 : #32515D;
 
 // secondary colors
-$secondary_50 : #FFF8ED;
-$secondary_100 : #FFE9C8;
-$secondary_200 : #FFDEAD;
-$secondary_300 : #FFCF88;
-$secondary_400 : #FFC571;
-$secondary_500 : #FFB74D;
-$secondary_600 : #E8A746;
-$secondary_700 : #B58237;
-$secondary_800 : #8C652A;
-$secondary_900 : #6B4D20;
-
-// primary text colors
-$primary_txt_50 : #E9E9E9;
-$primary_txt_100 : #BABABA;
-$primary_txt_200 : #989898;
-$primary_txt_300 : #696969;
-$primary_txt_400 : #4C4C4C;
-$primary_txt_600 : #1C1C1C;
-$primary_txt_700 : #161616;
-$primary_txt_800 : #111111;
-$primary_txt_900 : #0D0D0D;
+$secondary_50 : #E6E7F0;
+$secondary_100 : #B0B6D2;
+$secondary_200 : #8A92BC;
+$secondary_300 : #54609D;
+$secondary_400 : #33418A;
+$secondary_500 : #00126D;
+$secondary_600 : #001063;
+$secondary_700 : #000D4D;
+$secondary_800 : #000A3C;
+$secondary_900 : #00082E;
 
 $black_clr : #000000;
 $white_clr : #FFFFFF;
 
-$primary_txt : #1F1F1F;
-$secondary_txt: #6B6B6B;
+$primary_clr : #FFFFFF;
+$secondary_clr : #00126D;
+$accent_clr : #FF7518;
 
-$bg_primary : #F4F4F4;
-$bg_secondary : #F6F6F6;
+$primary_txt : #212121;
+$secondary_txt: #4D4D4D;
 
-$disable_primary_txt : #EBEBEB;
-$disable_secondary_txt : #BDBDBD;
+$disableBg: #F7F7F7;
+$disableTxt: #E9E9E9;
 
-$success : #04B34F;
-$error : #FF0000;
+$success : #198754;
+$error : #EA0101;
 $warning : #FF9900;
-$duplicate : #F7F1DF
