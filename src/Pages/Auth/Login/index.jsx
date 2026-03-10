@@ -36,7 +36,7 @@ const Login = () => {
                     </div>
                 </div>
                 <div className="col-span-3 row-span-6 col-start-4 bg-[#FFFFFF] h-full rounded-[8px] gap-[32px] flex flex-col items-center justify-center">
-                    <div className='flex flex-col gap-[24px] w-[326px]'>
+                    <div className='flex flex-col gap-[12px] w-[326px]'>
                         <div className='flex flex-col gap-[8px] items-center'>
                             <h2>Login</h2>
                             <p className='bodyMedium text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -52,7 +52,7 @@ const Login = () => {
                     </div>
                     <div className='flex flex-col gap-[16px]'>
                         <Button title={'Login'} size={'large'} onClick={loginFormik.handleSubmit} />
-                        <p className='bodyMedium'>Didn’t Have Register as Reviewer ? <span className='btnLarge cursor-pointer font-semibold text-[#00126D]'>Sign Up</span></p>
+                        <p className='bodyMedium'>Didn’t Have Register as Reviewer ? <span className='btnLarge cursor-pointer font-semibold text-[#00126D]' onClick={()=>navigate('/register')}>Sign Up</span></p>
                     </div>
                 </div>
             </div>

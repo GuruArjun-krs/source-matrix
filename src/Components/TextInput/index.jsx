@@ -4,7 +4,7 @@ import { Input } from 'antd';
 import { COLORS } from '../../Utils/colorPalatte';
 import './style.scss'
 
-const TextInput = ({ label, isMandatory = false, value, onChangeText, placeholder = 'Enter', error }) => {
+const TextInput = ({ label, isMandatory = false, value, onChangeText, placeholder = 'Enter', error, onBlur }) => {
 
     return (
         <div className='flex flex-col gap-1 w-full'>
@@ -25,6 +25,7 @@ const TextInput = ({ label, isMandatory = false, value, onChangeText, placeholde
                     placeholder={placeholder}
                     status={error ? 'error' : ''}
                     className={`py-[10px] px-[16px]`}
+                    onBlur={onBlur}
                 />
 
                 {error && (
